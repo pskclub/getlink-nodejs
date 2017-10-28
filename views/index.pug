@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    form
+        input(
+        type='text'
+        name='q'
+        value= q
+        )
+        button(type='submit') Submit
+
+    table.table
+        thead
+            tr
+                th  avatar
+                th  login
+                th  url
+        tbody
+
+            each val in data
+                tr
+                    td
+                        img.img-rounded(src= val.avatar_url)
+                    td= val.login
+                    td= val.url
